@@ -14,17 +14,18 @@ const Autocomplete = () => {
 
     function handleParaClick(e){
         setCity(e.target.innerText)
+        setInput('')
     }
 
     return (
         <div className="Autocomplete">
             <h1>Search cities of India</h1>
             <input type="text" onChange={(e)=>{setInput(e.target.value), setCity(e.target.value)}} value={city}></input>
-            <div className="innerDiv">
+            {input && <div className="innerDiv">
                 {cities.filter(value=>value.toLowerCase().includes(input.toLowerCase())).map(value=>(
-                <p onClick={handleParaClick}>{value}</p>
+                <li onClick={handleParaClick}>{value}</li>
             ))}
-            </div>
+            </div>}
         </div>
     )
 }

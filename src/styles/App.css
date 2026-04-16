@@ -1,1 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.Autocomplete{
+    position: relative;
+    input{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        font-size: 25px;
+        width: 30vw;
+    } 
+}
+
+.innerDiv{
+    margin-top: 35px;
+    overflow-y: scroll;
+    height: 30vh;
+    width: 30vw;
+    p{
+        font-size: 20px;
+        padding: 5px;
+        border: 1px solid green;
+    }
+    p:hover{
+        color: yellow;
+        font-weight: 700;
+        background-color: green;
+    }
+}
